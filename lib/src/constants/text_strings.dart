@@ -12,3 +12,10 @@ const String kOnBoardingSubTitle3 = "Connect with like-minded individuals and re
 const String kOnBoardingCounter1 = '1/3';
 const String kOnBoardingCounter2 = '2/3';
 const String kOnBoardingCounter3 = '3/3';
+
+//--Welcome Screen Text--//
+const String kWelcomeTitle = 'Build Awesome Apps';
+const String kWelcomeSubtitle = "Let's put your creativity on the development highway, craft apps";
+const String kLogin = "Login";
+const String kSignup = "Signup";
+
