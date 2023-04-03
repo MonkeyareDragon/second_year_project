@@ -16,4 +16,7 @@ const String tGoogleLogoImage = 'assets/images/logo/google-logo-png.png';
 const String kLoginImage = 'assets/images/login&signup/login.png';
 const String kSignUpImage = 'assets/images/login&signup/signup.png';
 
+//--Forgot Password--//
+const String kForgetPasswordImage = 'assets/images/forget_password/forget_password.png';
+
 

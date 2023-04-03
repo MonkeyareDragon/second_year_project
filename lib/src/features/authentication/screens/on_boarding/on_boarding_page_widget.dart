@@ -23,7 +23,7 @@ class OnBoardingPageWidget extends StatelessWidget {
         // mainAxisSize: MainAxisSize.max,
         // crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Image(image: AssetImage(model.image,), height: size.height * 0.45,),
+          Image(image: AssetImage(model.image,), height: size.height * 0.40,),
           Column(
             children: [
               Text(

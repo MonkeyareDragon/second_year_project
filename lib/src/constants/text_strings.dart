@@ -35,3 +35,21 @@ const String kSignUpSubTitle = 'Create your Profile to start your Journey with u
 const String kAlreadyHaveAccount = 'Already have an Account? ';
 const String kFullName = 'Full Name';
 const String kPhoneNo = "Phone Number";
+
+//--Forget Password Text--//
+const String kForgetPasswordtitle = 'MakeSelection';
+const String kForgetPasswordSubTitle = 'Select one of the options given below to reset your password.';
+const String kResetViaEmail = 'Reset via E-mail Verification';
+const String kResetViaPhone = 'Reset via Phone Verification';
+
+//--Forget Password Via PHone -Text--//
+const String kForgetPasswordviaPhone = 'Enter your registered Phone No to receive OTP';
+
+//--Forget Password Via E-mail Text--//
+const String kForgetPasswordviaEmail = "Enter your registered Email to receive OTP";
+const String kNextText = "Next";
+
+//--OTP Sceen - Text
+const String kOTPtitle = 'CO\nDE';
+const String kOPTSubTitle = "Verification";
+const String kOPTMessage = "Enter the verification code sent at ";

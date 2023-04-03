@@ -8,7 +8,6 @@ import '../models/model_on_boarding.dart';
 import '../screens/on_boarding/on_boarding_page_widget.dart';
 import '../screens/welcome_screen/welcome_screen.dart';
 
-
 class OnBoardingController extends GetxController{
   
   final controller = LiquidController();

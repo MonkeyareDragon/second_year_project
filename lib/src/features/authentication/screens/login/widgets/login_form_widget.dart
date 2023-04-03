@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:syp/src/features/core/screens/maindashboard/dashboard.dart';
 import '../../../../../constants/sizes.dart';
 import '../../../../../constants/text_strings.dart';
+import '../../forget_password/forget_password_options/forget_password_model_botton_sheet.dart';
 
 class LoginFormWidget extends StatelessWidget {
   const LoginFormWidget({
@@ -44,14 +47,16 @@ class LoginFormWidget extends StatelessWidget {
             Align(
               alignment: Alignment.centerRight,
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  ForgetPasswordScreen.buildShowModelBottomSheet(context);
+                },
                 child: const Text(kForgetPassword),
               ),
             ),
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () => Get.to(() => const DashBoard()),
                 child: Text(kLogin.toUpperCase()),
               ),
             )
