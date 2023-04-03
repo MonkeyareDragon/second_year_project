@@ -9,5 +9,5 @@ const kDarkColor = Color(0xFF000000);
 
 //--On-Boarding-Colors--//
 const kOnBoardingPage1Color = Colors.white;
-const kOnBoardingPage2Color = Color(0xfffddcdf);
-const kOnBoardingPage3Color = Color(0xffffdcbd);
+const kOnBoardingPage2Color = Color.fromARGB(255, 230, 176, 247);
+const kOnBoardingPage3Color = Color.fromARGB(255, 240, 186, 186);

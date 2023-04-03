@@ -38,6 +38,8 @@ dependencies:
   google_fonts: ^4.0.3
   flutter_native_splash: ^2.2.19
   get: ^4.6.5
+  liquid_swipe: ^3.0.0
+  smooth_page_indicator: ^1.0.0+2
 
 dev_dependencies:
   flutter_test:
@@ -79,6 +81,7 @@ flutter:
     - assets/images/
     - assets/images/native_splash/
     - assets/images/splash_images/
+    - assets/images/on_boarding_images/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
