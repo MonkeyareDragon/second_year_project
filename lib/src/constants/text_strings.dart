@@ -19,3 +19,13 @@ const String kWelcomeSubtitle = "Let's put your creativity on the development hi
 const String kLogin = "Login";
 const String kSignup = "Signup";
 
+//--Login Screen Text
+const String kLogintitle = 'Welcome Back';
+const String kLoginSubTitle = 'Make it work, make it right, make it fast.';
+const String kRemeberme = "Remember me?";
+const String kDontHaveAccount = "Don't have an Account?";
+const String kEmail = 'E-mail';
+const String kPassword = 'Password';
+const String kForgetPassword = 'Forget Password?';
+const String kSignInWithGoogle = 'Sign-In With Google';
+

@@ -10,3 +10,10 @@ const String kOnBoardingImage3 = 'assets/images/on_boarding_images/slider_image_
 
 //--Welcome Screen Images--//
 const String kWelcomeScreenImage = 'assets/images/welcome_images/welcome-homepage.png';
+
+//--Login&SingnUp Image--//
+const String tGoogleLogoImage = 'assets/images/logo/google-logo-png.png';
+const String kLoginImage = 'assets/images/login&signup/login.png';
+const String kSignUpImage = 'assets/images/login&signup/signup.png';
+
+
