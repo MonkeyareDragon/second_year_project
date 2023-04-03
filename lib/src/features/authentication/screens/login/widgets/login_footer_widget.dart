@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import '../../../../../constants/image_strings.dart';
 import '../../../../../constants/sizes.dart';
 import '../../../../../constants/text_strings.dart';
+import '../../signup/signup_screen.dart';
 
 class LoginFooterWidet extends StatelessWidget {
   const LoginFooterWidet({
@@ -32,7 +34,7 @@ class LoginFooterWidet extends StatelessWidget {
           height: kFormHeight - 20,
         ),
         TextButton(
-          onPressed: () {},
+          onPressed: () => Get.to(() => const SignUpScreen()),
           child: Text.rich(
             TextSpan(
                 text: kDontHaveAccount,

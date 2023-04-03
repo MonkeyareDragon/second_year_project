@@ -29,3 +29,9 @@ const String kPassword = 'Password';
 const String kForgetPassword = 'Forget Password?';
 const String kSignInWithGoogle = 'Sign-In With Google';
 
+//--Sign Up Screen Text--//
+const String kSignUpTitle = 'Get On Board!';
+const String kSignUpSubTitle = 'Create your Profile to start your Journey with us...';
+const String kAlreadyHaveAccount = 'Already have an Account? ';
+const String kFullName = 'Full Name';
+const String kPhoneNo = "Phone Number";

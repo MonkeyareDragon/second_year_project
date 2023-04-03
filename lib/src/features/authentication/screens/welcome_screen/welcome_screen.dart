@@ -5,6 +5,7 @@ import 'package:syp/src/constants/sizes.dart';
 import 'package:syp/src/constants/text_strings.dart';
 import '../../../../constants/colors.dart';
 import '../login/login_screen.dart';
+import '../signup/signup_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
@@ -50,7 +51,7 @@ class WelcomeScreen extends StatelessWidget {
                       ),
                 Expanded(
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () => Get.to(() => const SignUpScreen()),
                     child: Text(kSignup.toUpperCase()),
                   ),
                 ),
