@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "621615515042",
+    "project_id": "syp-project-iic",
+    "storage_bucket": "syp-project-iic.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:621615515042:android:5eef8f6fdd3ef6d02c9efb",
+        "android_client_info": {
+          "package_name": "com.yourdomain.syp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "621615515042-r6aj6netnh6md829opu71lcge67b86gg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6jTip-DUKKEAQDGzS0jz1LTH2AcXAilc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "621615515042-r6aj6netnh6md829opu71lcge67b86gg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

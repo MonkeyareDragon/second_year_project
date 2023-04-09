@@ -29,8 +29,7 @@ class OTPScreen extends StatelessWidget {
               numberOfFields: 6,
               fillColor: Colors.black.withOpacity(0.1),
               filled: true,
-              keyboardType: TextInputType.text,
-              // ignore: avoid_print
+              keyboardType: TextInputType.number,
               onSubmit: (code){print("OTP is => $code");},
             ),
             const SizedBox(height: 20.0,),
