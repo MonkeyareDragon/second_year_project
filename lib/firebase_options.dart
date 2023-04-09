@@ -63,6 +63,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '621615515042',
     projectId: 'syp-project-iic',
     storageBucket: 'syp-project-iic.appspot.com',
+    androidClientId: '621615515042-tp2lcdeisd3536eg90tteku8claaoaqq.apps.googleusercontent.com',
     iosClientId: '621615515042-ig0k2rvheqboro9047f33mslbdjradl3.apps.googleusercontent.com',
     iosBundleId: 'com.yourdomain.syp',
   );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:syp/src/repository/authentication_repository/authentication_repository.dart';
 import '../../../../constants/text_strings.dart';
 
 class DashBoard extends StatelessWidget {
@@ -17,6 +18,11 @@ class DashBoard extends StatelessWidget {
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.all(40.0),
+          child: IconButton(onPressed: () {
+            AuthenticationRepository.instance.logout();
+          },
+          icon: const Icon(Icons.person_outline_outlined),
+          ),
         ),
       ),
     );

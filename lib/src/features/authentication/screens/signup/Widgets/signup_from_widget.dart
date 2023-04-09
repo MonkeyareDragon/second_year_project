@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:syp/src/features/authentication/controllers/signup_controller.dart';
+import 'package:syp/src/features/authentication/screens/forget_password/forget_password_otp/otp_screen.dart';
 
 import '../../../../../constants/sizes.dart';
 import '../../../../../constants/text_strings.dart';
@@ -13,6 +14,7 @@ class SignUpForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(SignUpController());
+    // ignore: no_leading_underscores_for_local_identifiers
     final _formkey = GlobalKey<FormState>();
 
     return Container(
@@ -60,9 +62,11 @@ class SignUpForm extends StatelessWidget {
               child: ElevatedButton(
                 onPressed: () {
                   if (_formkey.currentState!.validate()) {
-                    SignUpController.instance.registerUser(
-                        controller.email.text.trim(),
-                        controller.password.text.trim());
+                    // SignUpController.instance.registerUser(
+                    //     controller.email.text.trim(),
+                    //     controller.password.text.trim());
+                    SignUpController.instance.phoneAuthentication(controller.phoneNo.text.trim());
+                    Get.to(() => const OTPScreen());
                   }
                 },
                 child: const Text(kSignup),

@@ -1,3 +1,5 @@
+// ignore_for_file: empty_catches, unused_catch_clause
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'package:syp/src/features/authentication/screens/welcome_screen/welcome_screen.dart';
@@ -10,40 +12,76 @@ class AuthenticationRepository extends GetxController {
   //Veribales
   final _auth = FirebaseAuth.instance;
   late final Rx<User?> firebaseUser;
+  var verificationId = ''.obs;
 
-    @override
+  @override
   void onReady() {
     firebaseUser = Rx<User?>(_auth.currentUser);
     firebaseUser.bindStream(_auth.userChanges());
     ever(firebaseUser, _setInitialScreen);
   }
 
-  _setInitialScreen(User? user){
-    user == null ? Get.offAll(() => const WelcomeScreen()) : Get.offAll(() => const DashBoard());
-
+  _setInitialScreen(User? user) {
+    user == null
+        ? Get.offAll(() => const WelcomeScreen())
+        : Get.offAll(() => const DashBoard());
   }
 
-  Future<void> createUserWithEmailAndPassword(String email, String password) async {
-    try{
-      await _auth.createUserWithEmailAndPassword(email: email, password: password);
-      firebaseUser.value != null ? Get.offAll(() => const DashBoard()) : Get.to(() => const WelcomeScreen());
-    } on FirebaseAuthException catch(e){
-      final ex =SignUpWithEmailAndPasswordFailure(e.code);
+  //func phone auth
+  void phoneAuthentication(String phoneNo) async {
+    await _auth.verifyPhoneNumber(
+      phoneNumber: phoneNo,
+      verificationCompleted: (credential) async {
+        await _auth.signInWithCredential(credential);
+      },
+      codeSent: (verificationId, resendToken) {
+        this.verificationId.value = verificationId;
+      },
+      codeAutoRetrievalTimeout: (verificationId) {
+        this.verificationId.value = verificationId;
+      },
+      verificationFailed: (e) {
+        if (e.code == "invalid-phone-number") {
+          Get.snackbar('Error', "The provide phone number is not valid.");
+        } else {
+          Get.snackbar('Error', "Something wnet wrong. Try again");
+        }
+      },
+    );
+  }
+
+  Future<bool> verifyOTP(String otp) async {
+    var credentials = await _auth
+    .signInWithCredential(PhoneAuthProvider.credential(verificationId: verificationId.value, smsCode: otp));
+    return credentials.user != null ? true : false; 
+  }
+
+  Future<void> createUserWithEmailAndPassword(
+      String email, String password) async {
+    try {
+      await _auth.createUserWithEmailAndPassword(
+          email: email, password: password);
+      firebaseUser.value != null
+          ? Get.offAll(() => const DashBoard())
+          : Get.to(() => const WelcomeScreen());
+    } on FirebaseAuthException catch (e) {
+      final ex = SignUpWithEmailAndPasswordFailure(e.code);
+      // ignore: avoid_print
       print('FIREBASE AUTH EXCEPTION -${ex.message}');
       throw ex;
-    } catch (_){
+    } catch (_) {
       const ex = SignUpWithEmailAndPasswordFailure();
+      // ignore: avoid_print
       print('EXCEPTION -${ex.message}');
       throw ex;
     }
   }
 
   Future<void> loginWithEmailAndPassword(String email, String password) async {
-    try{
+    try {
       await _auth.signInWithEmailAndPassword(email: email, password: password);
-    } on FirebaseAuthException catch(e){
-      
-    } catch (_){}
+    } on FirebaseAuthException catch (e) {
+    } catch (_) {}
   }
 
   Future<void> logout() async => await _auth.signOut();
