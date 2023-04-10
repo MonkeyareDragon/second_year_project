@@ -37,13 +37,24 @@ dependencies:
   cupertino_icons: ^1.0.2
   google_fonts: ^4.0.3
   flutter_native_splash: ^2.2.19
+
+  # State Management
   get: ^4.6.5
+
+  # OnBoarding Package
   liquid_swipe: ^3.0.0
   smooth_page_indicator: ^1.0.0+2
+
+  # OTP text field package
   flutter_otp_text_field: ^1.1.1
+
+  # Firebase package
   firebase_core: ^2.9.0
   firebase_auth: ^4.4.0
 
+  # Icon packages
+  line_awesome_flutter: ^2.0.0
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -89,6 +100,7 @@ flutter:
     - assets/images/logo/
     - assets/images/login&signup/
     - assets/images/forget_password/
+    - assets/images/profile/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

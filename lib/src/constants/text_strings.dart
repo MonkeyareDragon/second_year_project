@@ -53,3 +53,23 @@ const String kNextText = "Next";
 const String kOTPtitle = 'CO\nDE';
 const String kOPTSubTitle = "Verification";
 const String kOPTMessage = "Enter the verification code sent at ";
+
+
+//-Profile Screen Text
+const String kProfile = "Profile";
+const String kEditProfile = "Edit Profile";
+const String kLogoutDialogHeading = "Logout";
+const String kProfileHeading = "Nutri-Guide";
+const String kProfileSubHeading = "This is a Demo for Course Work.";
+
+//-Menu
+const String kMenu1 = "LogOut";
+const String kMenu2 = "Foods";
+const String kMenu3 = "Activites";
+const String kMenu4 = "Stats";
+const String kMenu5 = "About";
+
+//-- Update Profile Screen
+const String kDelete = "Delete";
+const String kJoined = "Joined";
+const String kJoinedAt = " 21 Sep 2022";

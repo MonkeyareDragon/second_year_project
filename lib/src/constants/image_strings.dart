@@ -20,3 +20,7 @@ const String kSignUpImage = 'assets/images/login&signup/signup.png';
 const String kForgetPasswordImage = 'assets/images/forget_password/forget_password.png';
 
 
+//--Profile Images
+const String kProfileImage = "assets/images/profile/profile.png";
+
+
