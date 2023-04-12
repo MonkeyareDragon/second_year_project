@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:syp/firebase_options.dart';
+import 'package:syp/src/features/authentication/screens/splash_screen/splash_screen.dart';
 import 'package:syp/src/repository/authentication_repository/authentication_repository.dart';
 import 'package:syp/src/utils/theme/theme.dart';
 
@@ -25,7 +26,7 @@ class App extends StatelessWidget {
       darkTheme: KAppTheme.darkTheme,
       defaultTransition: Transition.rightToLeftWithFade,
       transitionDuration: const Duration(milliseconds: 200),
-      home: const CircularProgressIndicator(),
+      home: SplashScreen(),
     );
   }
 }
