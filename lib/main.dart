@@ -23,7 +23,7 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.system,
       theme: KAppTheme.lightTheme,
-      darkTheme: KAppTheme.darkTheme,
+      // darkTheme: KAppTheme.darkTheme,
       defaultTransition: Transition.rightToLeftWithFade,
       transitionDuration: const Duration(milliseconds: 200),
       home: SplashScreen(),
